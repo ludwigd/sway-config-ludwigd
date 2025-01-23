@@ -9,7 +9,8 @@ set $mod Mod4
 set $left j
 set $down k
 set $up l
-set $right odiaeresis
+set $right semicolon
+#set $right odiaeresis
 
 # Your preferred terminal emulator
 set $term foot
@@ -22,7 +23,6 @@ font pango:JetBrains Mono 11
 
 # Background
 output * bg "#000000" solid_color
-#output * bg /usr/share/backgrounds/default.png fill
 
 ##############
 # Autostarts #
@@ -37,10 +37,6 @@ exec swayidle -w \
 # Start a clipboard manager
 exec wl-paste -t text --watch clipman store --no-persist
 
-# xdg-desktop-portal needs to know about the current desktop
-# NOTE: not needed if sway-systemd is enabled (Fedora only)
-#exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
-
 #######################
 # Input configuration #
 #######################
@@ -52,8 +48,8 @@ input type:touchpad {
 }
 
 input type:keyboard {
-      xkb_layout "de"
-      xkb_variant "nodeadkeys"
+      #xkb_layout "de"
+      #xkb_variant "nodeadkeys"
       xkb_options "caps:escape"
 }
 
@@ -255,4 +251,3 @@ bindsym $mod+Shift+i exec swaycaffeine --clear-all
 ###########################################################
 
 for_window [app_id="pavucontrol"] floating enable
-assign [app_id="firefox"] workspace number 1
