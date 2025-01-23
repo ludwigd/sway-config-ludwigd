@@ -22,11 +22,11 @@ Requires:       clipman
 Requires:       foot
 Requires:       grim
 Requires:       i3status
-Requires:       wireplumber
 Requires:       rofi-wayland
 Requires:       swaycaffeine
 Requires:       swayidle
 Requires:       swaylock
+Requires:       wireplumber
 Requires:       yaws
 
 %description
