@@ -19,10 +19,12 @@ Source0: %{name}-%{version}.tar.gz
 
 Requires:       brightnessctl
 Requires:       clipman
+Requires:       desktop-backgrounds-compat
 Requires:       foot
 Requires:       grim
 Requires:       i3status
 Requires:       rofi-wayland
+Requires:       swaybg
 Requires:       swaycaffeine
 Requires:       swayidle
 Requires:       swaylock
