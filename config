@@ -37,6 +37,9 @@ exec swayidle -w \
 # Start a clipboard manager
 exec wl-paste -t text --watch clipman store --no-persist
 
+# xdg-desktop-portal (and others) needs to know about the current desktop
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 #######################
 # Input configuration #
 #######################
