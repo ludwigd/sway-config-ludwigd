@@ -1,7 +1,7 @@
 %global srcname sway-config-ludwigd
 
 Name:           sway-config-ludwigd
-Version:        1.0.1
+Version:        1.0.2
 Release:        1%{?dist}
 Summary:        ludwigd's configuration for Sway
 License:        GPLv3+
@@ -48,6 +48,9 @@ install -m 644 ./config %{buildroot}/%{_sysconfdir}/sway/config
 %config(noreplace) %{_sysconfdir}/sway/config
 
 %changelog
+* Sun Feb 16 2025 Damian Ludwig <ludwigd@fedoraproject.org> 1.0.2-1
+- fix: set correct environment variables (ludwigd@fedoraproject.org)
+
 * Sun Feb 16 2025 Damian Ludwig <ludwigd@fedoraproject.org> 1.0.1-1
 - feat: a more visually pleasant default config (ludwigd@fedoraproject.org)
 
