@@ -1,7 +1,7 @@
 %global srcname sway-config-ludwigd
 
 Name:           sway-config-ludwigd
-Version:        1.0.3
+Version:        1.0.4
 Release:        1%{?dist}
 Summary:        ludwigd's configuration for Sway
 License:        GPLv3+
@@ -49,6 +49,9 @@ install -m 644 ./config %{buildroot}/%{_sysconfdir}/sway/config
 %config(noreplace) %{_sysconfdir}/sway/config
 
 %changelog
+* Fri Aug 22 2025 Damian Ludwig <ludwigd@fedoraproject.org> 1.0.4-1
+- config change (ludwigd@fedoraproject.org)
+
 * Fri Apr 25 2025 Damian Ludwig <ludwigd@fedoraproject.org> 1.0.3-1
 - feat: add jetbrains font (ludwigd@fedoraproject.org)
 
