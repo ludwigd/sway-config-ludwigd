@@ -10,7 +10,6 @@ set $left j
 set $down k
 set $up l
 set $right semicolon
-#set $right odiaeresis
 
 # Your preferred terminal emulator
 set $term foot
@@ -22,7 +21,7 @@ set $menu "rofi -terminal $term -modi combi -combi-modi sway:yaws,drun -show com
 font pango:JetBrains Mono 11
 
 # Background
-output * bg /usr/share/backgrounds/default.png fill
+output * bg /usr/share/backgrounds/default.jxl fill
 
 ##############
 # Autostarts #
@@ -37,8 +36,8 @@ exec swayidle -w \
 # Start a clipboard manager
 exec wl-paste -t text --watch clipman store --no-persist
 
-# xdg-desktop-portal (and others) needs to know about the current desktop
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+# see: https://github.com/swaywm/sway/wiki#systemd-and-dbus-activation-environments
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SWAYSOCK
 
 #######################
 # Input configuration #
@@ -258,3 +257,4 @@ bindsym $mod+Shift+i exec swaycaffeine --clear-all
 ###########################################################
 
 for_window [app_id="pavucontrol"] floating enable
+for_window [app_id="nm-connection-editor"] floating enable
