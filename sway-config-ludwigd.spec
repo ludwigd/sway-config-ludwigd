@@ -23,6 +23,7 @@ Requires:       desktop-backgrounds-compat
 Requires:       foot
 Requires:       grim
 Requires:       i3status
+Requires:       i3status-config-ludwigd
 Requires:       jetbrains-mono-fonts-all
 Requires:       rofi-wayland
 Requires:       swaybg
